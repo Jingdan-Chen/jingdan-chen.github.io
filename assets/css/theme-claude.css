@@ -16,6 +16,7 @@
   --claude-footer-border: rgba(194, 113, 79, 0.15);
   /* Decorative background image: 0 = invisible, 1 = full strength (higher = less transparent) */
   --claude-decoration-opacity: 0.14;
+  --claude-decoration-image: url("../img/red_panda_bg.png");
 }
 
 @media (prefers-color-scheme: dark) {
@@ -30,7 +31,8 @@
     --claude-social-bg: #22211E;
     --claude-social-text: #D1CEC7;
     --claude-footer-border: rgba(226, 138, 103, 0.15);
-    --claude-decoration-opacity: 0.48;
+    --claude-decoration-opacity: 0.22;
+    --claude-decoration-image: url("../img/red_panda_bg_dark.png");
   }
 }
 
@@ -46,7 +48,8 @@
   --claude-social-bg: #22211E;
   --claude-social-text: #D1CEC7;
   --claude-footer-border: rgba(226, 138, 103, 0.15);
-  --claude-decoration-opacity: 0.48;
+  --claude-decoration-opacity: 0.22;
+  --claude-decoration-image: url("../img/red_panda_bg_dark.png");
 }
 
 /* 强制浅色模式变量 */
@@ -62,6 +65,7 @@
   --claude-social-text: #8B7355;
   --claude-footer-border: rgba(194, 113, 79, 0.15);
   --claude-decoration-opacity: 0.14;
+  --claude-decoration-image: url("../img/red_panda_bg.png");
 }
 
 body.theme-claude {
@@ -82,7 +86,7 @@ body.theme-claude .page-decoration-bg {
   z-index: 0;
   pointer-events: none;
   background-color: transparent;
-  background-image: url("../img/red_panda_bg.png");
+  background-image: var(--claude-decoration-image);
   background-repeat: no-repeat;
   background-position: center 85%;
   background-size: min(920px, 95vw) auto;

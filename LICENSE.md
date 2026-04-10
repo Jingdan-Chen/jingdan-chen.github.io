@@ -1,6 +1,8 @@
 MIT License
 
 Copyright (c) 2023-present George Cushen (https://georgecushen.com/)
+Copyright (c) 2026 Yuheng Yang
+Copyright (c) 2026 Jingdan Chen (Modifications)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

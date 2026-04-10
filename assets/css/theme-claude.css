@@ -14,6 +14,8 @@
   --claude-social-bg: #FFFFFF;
   --claude-social-text: #8B7355;
   --claude-footer-border: rgba(194, 113, 79, 0.15);
+  /* Decorative background image: 0–1, increase for a stronger red panda */
+  --claude-decoration-opacity: 0.14;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -28,6 +30,7 @@
     --claude-social-bg: #22211E;
     --claude-social-text: #D1CEC7;
     --claude-footer-border: rgba(226, 138, 103, 0.15);
+    --claude-decoration-opacity: 0.09;
   }
 }
 
@@ -43,6 +46,7 @@
   --claude-social-bg: #22211E;
   --claude-social-text: #D1CEC7;
   --claude-footer-border: rgba(226, 138, 103, 0.15);
+  --claude-decoration-opacity: 0.09;
 }
 
 /* 强制浅色模式变量 */
@@ -57,6 +61,7 @@
   --claude-social-bg: #FFFFFF;
   --claude-social-text: #8B7355;
   --claude-footer-border: rgba(194, 113, 79, 0.15);
+  --claude-decoration-opacity: 0.14;
 }
 
 body.theme-claude {
@@ -68,6 +73,30 @@ body.theme-claude {
   font-weight: 400;
   padding: 0;
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Full-viewport decorative image behind content (opacity via CSS variable) */
+body.theme-claude .page-decoration-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-color: transparent;
+  background-image: url("../img/red_panda_bg.png");
+  background-repeat: no-repeat;
+  background-position: center 85%;
+  background-size: min(920px, 95vw) auto;
+  background-attachment: fixed;
+  opacity: var(--claude-decoration-opacity);
+  transition: opacity 0.35s ease;
+}
+
+/* fixed backgrounds are flaky on some mobile browsers */
+@media (max-width: 768px) {
+  body.theme-claude .page-decoration-bg {
+    background-attachment: scroll;
+    background-position: center bottom;
+  }
 }
 
 /* --- Top Navigation Bar --- */
@@ -172,6 +201,8 @@ body.theme-claude .dot-fusion { background: #B5654A; }
 
 /* --- Wrapper: two-column layout --- */
 body.theme-claude .wrapper {
+  position: relative;
+  z-index: 1;
   max-width: 1120px;
   width: 100%;
   margin: 0 auto;

@@ -14,7 +14,7 @@
   --claude-social-bg: #FFFFFF;
   --claude-social-text: #8B7355;
   --claude-footer-border: rgba(194, 113, 79, 0.15);
-  /* Decorative background image: 0–1, increase for a stronger red panda */
+  /* Decorative background image: 0 = invisible, 1 = full strength (higher = less transparent) */
   --claude-decoration-opacity: 0.14;
 }
 
@@ -30,7 +30,7 @@
     --claude-social-bg: #22211E;
     --claude-social-text: #D1CEC7;
     --claude-footer-border: rgba(226, 138, 103, 0.15);
-    --claude-decoration-opacity: 0.09;
+    --claude-decoration-opacity: 0.24;
   }
 }
 
@@ -46,7 +46,7 @@
   --claude-social-bg: #22211E;
   --claude-social-text: #D1CEC7;
   --claude-footer-border: rgba(226, 138, 103, 0.15);
-  --claude-decoration-opacity: 0.09;
+  --claude-decoration-opacity: 0.24;
 }
 
 /* 强制浅色模式变量 */

@@ -656,11 +656,11 @@ body.theme-claude strong {
   }
 
   body.theme-claude .content {
-    padding: 24px 0 48px;
-    margin-left: 0;
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
+    padding: 24px 0 48px !important;
+    margin-left: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
   }
 
   body.theme-claude .site-footer {

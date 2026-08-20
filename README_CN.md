@@ -48,9 +48,6 @@
 ### 修改主题颜色
 如果你想修改主题色（如链接颜色、强调色），可以编辑 `assets/css/theme-claude.css`。
 
-### 访客地图
-主页集成了 [ClustrMaps](https://clustrmaps.com/)。你可以去官网注册并获取你自己的地图 ID，然后替换 `index.html` 中 `updateMap` 函数里的相关参数。
-
 ## 📄 许可证
 本项目采用 [MIT License](LICENSE.md) 开源。
 

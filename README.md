@@ -54,9 +54,6 @@ In your repository settings:
 ### Modify Theme Colors
 If you want to change the theme colors (such as link colors or accent colors), you can edit `assets/css/theme-claude.css`.
 
-### Visitor Map
-The homepage integrates [ClustrMaps](https://clustrmaps.com/). You can register on their official website to get your own map ID, then replace the relevant parameters in the `updateMap` function within `index.html`.
-
 ---
 
 ## 📄 License

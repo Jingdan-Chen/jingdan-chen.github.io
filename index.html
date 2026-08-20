@@ -83,10 +83,6 @@
           </a>
         </div>
 
-        <div class="visitor-map sidebar-map">
-          <img id="clustrmap-sidebar" src="https://www.clustrmaps.com/map_v2.png?cl=c2714f&w=240&t=tt&d=2TdrBvABEGrBC_bDnUoKBxbOtj0sjGIy1JJrExxZxZM&co=faf9f7&ct=3d3929" alt="ClustrMaps" />
-        </div>
-
       </div>
     </header>
 
@@ -103,7 +99,7 @@
 
           <p>Feel free to reach out if you're interested in my work! :-)</p>
 
-          <p><strong><a href="assets/cv/jingdan_CV.pdf" target="_blank">Download my CV</a></strong></p>
+          <p><strong><a href="assets/documents/jingdan-chen-academic-profile.pdf" target="_blank" rel="noopener">Download my CV</a></strong></p>
         </div>
       </div>
 
@@ -339,6 +335,16 @@
         <h3 class="section-title">Fellowships (since Graduate School)</h3>
         <div class="section-body">
           <div class="awards-grid">
+            <!-- Original award record: Buhrke Fellowship Match Chem, Aug. 11, 2026 -->
+            <div class="award-item">
+              <span class="award-icon">🎓</span>
+              <div class="award-text"><strong>Victor E. Buhrke Graduate Fellowship</strong> — August 11, 2026</div>
+            </div>
+            <!-- Original award record: Snyder Grad Fellowship Provost Mtch, Aug. 11, 2026 -->
+            <div class="award-item">
+              <span class="award-icon">🎓</span>
+              <div class="award-text"><strong>Dr. Harold R. Snyder Fellowship</strong> — August 11, 2026</div>
+            </div>
             <div class="award-item">
               <span class="award-icon">🎓</span>
               <div class="award-text"><strong>Ullyot Fellowship</strong> — July 7, 2025</div>
@@ -361,29 +367,6 @@
       const themeToggle = document.getElementById('themeToggle');
       const icon = themeToggle.querySelector('i');
       
-      // Function to update map based on current theme
-      function updateMap(isDark) {
-      // Updated the 'd' parameter to match your current ClustrMaps code
-      const MAP_BASE = 'https://www.clustrmaps.com/map_v2.png?w=240&t=tt&d=1By7uMfeGG8iDZmbum8LdR3o3FRxBc4F_gVWcqkBtHI';
-      const co = isDark ? '1a1917' : 'faf9f7';
-      const cl = isDark ? 'e28a67' : 'c2714f';
-      const ct = isDark ? 'd1cec7' : '3d3929';
-      
-      const img = document.getElementById('clustrmap-sidebar');
-      if (img) {
-        img.src = MAP_BASE + '&cl=' + cl + '&co=' + co + '&ct=' + ct;
-        // 确保图片被包裹在链接中
-        if (!img.parentElement || img.parentElement.tagName !== 'A') {
-          const link = document.createElement('a');
-          // Updated the href site ID to match your current profile
-          link.href = 'https://clustrmaps.com/site/1c9op';
-          link.title = 'ClustrMaps';
-          img.parentNode.insertBefore(link, img);
-          link.appendChild(img);
-        }
-      }
-    }
-
       function setTheme(isDark) {
         if (isDark) {
           document.documentElement.setAttribute('data-theme', 'dark');
@@ -394,7 +377,6 @@
           icon.classList.replace('fa-sun', 'fa-moon');
           localStorage.setItem('theme', 'light');
         }
-        updateMap(isDark);
       }
 
       // Initial theme setup

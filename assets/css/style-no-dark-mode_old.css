@@ -138,42 +138,6 @@ body.theme-claude .social-icons {
   flex-wrap: wrap;
 }
 
-/* --- Sidebar visitor map --- */
-body.theme-claude .sidebar-map {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 48px auto 0;
-  width: 240px; /* 调整宽度以对齐文字边缘 */
-  background-color: transparent;
-  border: none; /* 移除边框 */
-  border-radius: 12px;
-  box-shadow: none; /* 移除阴影 */
-  transition: all 0.3s ease;
-  box-sizing: border-box;
-  overflow: hidden;
-  line-height: 0;
-}
-
-body.theme-claude .sidebar-map:hover {
-  transform: translateY(-4px);
-  /* 悬浮时可以保留轻微的阴影或不加，这里先移除以保持极简 */
-}
-
-body.theme-claude .sidebar-map img,
-body.theme-claude .sidebar-map canvas {
-  max-width: 100%;
-  width: 100%;
-  height: auto !important;
-  display: block;
-  border: none;
-}
-
-/* Hide footer map for Claude theme */
-body.theme-claude .site-footer .visitor-map {
-  display: none;
-}
-
 body.theme-claude .social-icons a {
   display: inline-flex;
   align-items: center;
@@ -439,22 +403,6 @@ body.theme-claude .site-footer p {
   font-size: 13px;
   color: #8C8577;
   margin: 0;
-}
-
-body.theme-claude .visitor-map {
-  margin-bottom: 16px;
-}
-
-body.theme-claude .visitor-map img {
-  max-width: 240px;
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(194, 113, 79, 0.12);
-  transition: box-shadow 0.2s ease;
-}
-
-body.theme-claude .visitor-map img:hover {
-  box-shadow: 0 4px 16px rgba(194, 113, 79, 0.2);
 }
 
 /* --- Headings override --- */
